@@ -71,6 +71,7 @@ visit_summary_data %<>% mutate(REACC = vGetREAcuity(ACUITIES),
                                REHT = vGetREHypertension(PATDATA.F5614), 
                                LEHT = vGetLEHypertension(PATDATA.F5614))
 missmap(visit_summary_data[,5:8], col = c("red", "lightgreen"), rank.order = FALSE)
+# For now ignore visits where the right or left eye acuity is missing
 
 # now need the OCT data ..
 

@@ -1,0 +1,129 @@
+---
+title: "Predicting Vision Clinical Results based on OCT Prarmeters"
+author: "Dror Lichtenberg"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: TRUE
+    toc: TRUE
+mainfont: Century Gothic
+fontsize: 12
+urlcolor: blue
+papersize: a4
+header-includes:
+- \usepackage{graphicx}
+- \usepackage{float}
+---
+
+```{r setup, include=FALSE}
+# Load Libraries
+# Todo: library("tidyverse")
+# Todo: library("corrplot")
+
+# Default Settings
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load RDAs
+# Todo: load("./rdas/data_summary.rda")
+
+# Global parameters
+# Todo: row_num <- dim(raw_data)[1]
+# Todo: col_num <- dim(raw_data)[2]
+
+```
+
+\newpage
+# Overview
+## Executive Summary
+<Todo: Add here after finishing the paper>
+
+## Data-sources
+<Todo: Add image for obtaining data and optional refernce to appendix "Adventures in obtaining data" (if exists ...), explain obfuscation >
+
+## The Datasets
+### Patients Data 
+List of attributes in the dataset: <Todo: >
+
+|# |Attribute            |Type                                   
+|--|---------------------|-----------------------------------
+|01|                     | 
+|02|                     | 
+|03|                     | 
+
+### Clinical Summary Data
+List of attributes in the dataset:  <Todo: >
+
+|# |Attribute            |Type                                   
+|--|---------------------|-----------------------------------
+|01|                     | 
+|02|                     | 
+|03|                     | 
+
+
+### OCT Examination Data 
+List of attributes in the dataset:  <Todo: organize nice>
+
+
+## Project Goal
+**<Todo: Define with Ehud>**
+
+<Todo: More details on goal/goals>
+
+## Key Steps Performed 
+### Data
+1) Obtain Data: 
+2) Consolidate and Tidy Cleaness: 
+3) Beautify Attribute Names: Modified the column names to have title notations (capitalized and whith whitespaces instead of `.` delimiter).
+4) Split Data Set:  Created the `train` and `test` data sets to be used for creating and evaluating the different algorithms.
+5) Analyzed Data: Performed exploratory data analysis (EDA) and visualized the main attributes and relation between them.
+
+### Methods 
+1) Trained different models
+2) Compared the results (accuracy and performance) of single models 
+3) Evaluate ensemble approches
+
+\newpage
+# Data Analysis (Train Data Subset)
+## Summary
+Summary table below lists the attributes, grouped by the sickness classification
+
+#```{r data_summary, echo=FALSE, message = FALSE}
+#summary_table
+#```
+
+TODO: Note on which attribute seem to have greatest impact
+
+## Key Attributes
+
+## Relations Between Attributes
+
+```{r correlation, echo=FALSE, message = FALSE}
+#corrplot(cor(int_data[1:16]), type="lower", 
+#                               method="color", 
+#                               order="hclust", 
+#                               tl.col="black", tl.srt=45)
+```
+
+
+\newpage
+# Models and Results <ToDo: All >
+## Naive Bayes Algorithm
+
+## Logistic Regression Algorithm
+
+## Random Forest Algorithm 
+
+## Ensemble (???)
+
+## Results comparison+
+
+\newpage
+# Conclusion  <ToDo: All >
+## Summary
+
+## Potential Impact,
+
+## Limitations and Future Work
+
+
