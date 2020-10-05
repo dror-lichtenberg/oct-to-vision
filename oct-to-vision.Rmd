@@ -1,5 +1,5 @@
 ---
-title: "Predicting Vision Clinical Results based on OCT Prarmeters"
+title: "Predicting Vision Visual Acuity based on Retinal Thickness"
 author: "Dror Lichtenberg"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
@@ -125,5 +125,3 @@ TODO: Note on which attribute seem to have greatest impact
 ## Potential Impact,
 
 ## Limitations and Future Work
-
-

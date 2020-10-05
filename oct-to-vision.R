@@ -63,15 +63,16 @@ if (!file.exists("./figs")){dir.create("./figs")}
 
 # Section 2: Load, clean, Summarize and split data
 ## 2.a Load <TODO Place data on GitHub and read from it>
-patients_data <- read.csv("./data/patients_data.csv", stringsAsFactors = FALSE)
+patients_data <- read.csv("https://raw.githubusercontent.com/dror-lichtenberg/oct-to-vision/main/data/patients_data.csv", stringsAsFactors = FALSE)
+patients_data$GENDER <- as.factor(patients_data$GENDER)
 
-visit_summary_data <- read.csv("./data/visit_summary_data.csv", stringsAsFactors = FALSE)
+visit_summary_data <- read.csv("https://raw.githubusercontent.com/dror-lichtenberg/oct-to-vision/main/data/visit_summary_data.csv", stringsAsFactors = FALSE)
 visit_summary_data %<>% mutate(REACC = vGetREAcuity(ACUITIES), 
                                LEACC = vGetLEAcuity(ACUITIES),
                                REHT = vGetREHypertension(PATDATA.F5614), 
                                LEHT = vGetLEHypertension(PATDATA.F5614))
 missmap(visit_summary_data[,5:8], col = c("red", "lightgreen"), rank.order = FALSE)
-# For now ignore visits where the right or left eye acuity is missing
 
 # now need the OCT data ..
+
 
